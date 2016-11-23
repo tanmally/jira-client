@@ -23,7 +23,14 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
@@ -32,7 +39,7 @@ import net.sf.json.JSONObject;
 /**
  * Represents a JIRA issue.
  */
-public class Issue extends Resource {
+public class Issue extends Resource  {
 
     /**
      * Used to chain fields to a create action.

@@ -43,6 +43,7 @@ public class ProjectTest {
         assertEquals("Task", project.getIssueTypes().get(0).getName());
         assertEquals("Bug", project.getIssueTypes().get(1).getName());
     }
+    
     @Test
     public void projectCategoryTest()
     {

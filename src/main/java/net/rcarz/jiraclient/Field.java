@@ -117,6 +117,7 @@ public final class Field {
         }
     }
 
+    public static final String ROLE = "role";
     public static final String ASSIGNEE = "assignee";
     public static final String ATTACHMENT = "attachment";
     public static final String CHANGE_LOG = "changelog";
@@ -418,6 +419,10 @@ public final class Field {
                 result = (T)new Watches(restclient, (JSONObject)r);
             else if (type == WorkLog.class)
                 result = (T)new WorkLog(restclient, (JSONObject)r);
+            else if (type == Role.class)
+                result = (T)new Role(restclient, (JSONObject)r);
+            else if (type == RoleActor.class)
+                result = (T)new RoleActor(restclient, (JSONObject)r);
         }
 
         return result;
@@ -435,6 +440,9 @@ public final class Field {
 
         if (s instanceof String)
             result = (String)s;
+        
+        if (s instanceof Integer)
+            result = ((Integer)s).toString();
 
         return result;
     }

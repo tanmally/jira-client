@@ -80,6 +80,7 @@ public class User extends Resource {
     private void deserialise(JSONObject json) {
         Map map = json;
 
+        
         self = Field.getString(map.get("self"));
         id = Field.getString(map.get("id"));
         active = Field.getBoolean(map.get("active"));
@@ -105,7 +106,7 @@ public class User extends Resource {
 
     @Override
     public String toString() {
-        return getName();
+        return getDisplayName();
     }
 
     public boolean isActive() {
